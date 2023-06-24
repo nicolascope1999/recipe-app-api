@@ -98,10 +98,5 @@ class PrivateRecipeApiTest(TestCase):
         serializer = RecipeDetailSerializer(recipe)
         self.assertEqual(res.data, serializer.data)
 
-class RecipeDetailSerializer(RecipeSerializer):
-    """Serializer ofr recipe detail view"""
-    
-    class Meta(RecipeSerializer.Meta):
-        fields = RecipeSerializer.Meta.fields + ['description']
 
-        
+
